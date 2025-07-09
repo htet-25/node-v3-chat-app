@@ -8,7 +8,7 @@ const Filter = require('bad-words')
 
 const server = http.createServer(app);
 const io = socketio(server)
-const port = 3000
+const port = process.env.PORT || 3000
 
 const {generateMessage,generateLocationMessage} = require('./utils/messages')
 
